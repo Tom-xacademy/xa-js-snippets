@@ -1,0 +1,75 @@
+{
+    "ClassComponent": {
+        "prefix": "_cc",
+        "body": [
+            "import React from \"react\";",
+            "",
+            "class ${0} extends React.Component {",
+            "    state = {",
+            "        loading: true,",
+            "        error: null,",
+            "    };",
+            "",
+            "    componentDidMount() {",
+            "        init();",
+            "    }",
+            "",
+            "    init = () => {",
+            "        ",
+            "    }",
+            "",
+            "    render() {",
+            "        return (",
+            "           <${0}View {...this.state} />",
+            "        );",
+            "    }",
+            "}",
+            "",
+            "export default ${0};"
+        ],
+        "description": "Generates an empty react class with loading and error state."
+    },
+    "ViewComponent": {
+        "prefix": "_vc",
+        "body": [
+            "import React from \"react\";",
+            "",
+            "export ${1} = (props) => {",
+            "    return (",
+            "       <div className=\"${2}-view\">",
+            "       </div>",
+            "}"
+        ],
+        "description": ""
+    },
+    "ClassFunction": {
+        "prefix": "_cfoo",
+        "body": ["${1} = () => {", "    ${2}", "}"],
+        "description": ""
+    },
+    "Function": {
+        "prefix": "_foo",
+        "body": ["const ${1} = (${2}) => {", "    ${3}", "}"],
+        "description": ""
+    },
+    "ImportReact": {
+        "prefix": "_imr",
+        "body": ["import React from \"react\""],
+        "description": "Imports react."
+    },
+    "StateCloneToProps": {
+        "prefix": "_sttp",
+        "body": ["{...this.state}"],
+        "description": "Clones the state to props."
+    },
+    "PropCloneToProps": {
+        "prefix": "_",
+        "body": ["{...this.props}"],
+        "description": "Clones the props to props."
+    },
+    "": {
+        "prefix": "_",
+        "body": [],
+        "description": ""
+    }
+}
