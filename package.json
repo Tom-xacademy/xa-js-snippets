@@ -1,0 +1,53 @@
+{
+    "name": "xajssnippets",
+    "description": "React-javascript code snippets.",
+    "version": "1.0.0",
+    "displayName": "React - Javascript snippets",
+    "publisher": "Tomi",
+    "icon": "images/react.png",
+    "license": "ISC",
+    "scripts": {
+        "build": "vsce package",
+        "clean": "rm -rf xasnippets-*.vsix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Tom-xacademy/xa-js-snippets.git"
+    },
+    "keywords": [
+        "react",
+        "react-xa",
+        "typescript",
+        "codesnippets",
+        "typescript code snippets",
+        "xacademy"
+    ],
+    "engines": {
+        "vscode": "^0.10.x"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "author": "tamas.xacademy@gmail.com",
+    "bugs": {
+        "url": "https://github.com/Tom-xacademy/xa-js-snippets/issues"
+    },
+    "homepage": "https://github.com/Tom-xacademy/xa-js-snippets#readme",
+    "__metadata": {
+        "id": "",
+        "publisherId": "",
+        "publisherDisplayName": "Tomi"
+    }
+}
