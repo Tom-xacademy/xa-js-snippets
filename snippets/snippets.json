@@ -67,5 +67,25 @@
         "prefix": "_ptp",
         "body": ["{...this.props}"],
         "description": "Clones the props to props."
+    },
+    "GenerateModel": {
+        "prefix": "_mo",
+        "body": [
+            "export class ${1}Model {",
+            "    constructor(data) {",
+            "        if (!data) return;",
+            "",
+            "        for (let key in this) {",
+            "            if (key in data) {",
+            "                this[key] = `${data[key]}`;",
+            "            }",
+            "        }",
+            "",
+            "    }",
+            "",
+            "    ${2}= \"\"; // string",
+            "}"
+        ],
+        "description": "Generates a model instance."
     }
 }

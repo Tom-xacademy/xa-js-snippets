@@ -13,3 +13,4 @@ This is a simple javascript code snippet generator for projects where I can't us
 | \_imr  | Imports react.                                               |
 | \_sttp | Clones the state to props.                                   |
 | \_ptp  | Clones the props to props.                                   |
+| \_mo   | Generates a model instance.                                  |
