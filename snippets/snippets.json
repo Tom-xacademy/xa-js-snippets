@@ -40,17 +40,17 @@
             "       </div>",
             "}"
         ],
-        "description": ""
+        "description": "Generates an empty react view function."
     },
     "ClassFunction": {
         "prefix": "_cfoo",
         "body": ["${1} = () => {", "    ${2}", "}"],
-        "description": ""
+        "description": "Generates an empty class arrow function."
     },
     "Function": {
         "prefix": "_foo",
         "body": ["const ${1} = (${2}) => {", "    ${3}", "}"],
-        "description": ""
+        "description": "Generates an empty arrow function."
     },
     "ImportReact": {
         "prefix": "_imr",
@@ -63,13 +63,8 @@
         "description": "Clones the state to props."
     },
     "PropCloneToProps": {
-        "prefix": "_",
+        "prefix": "_ptp",
         "body": ["{...this.props}"],
         "description": "Clones the props to props."
-    },
-    "": {
-        "prefix": "_",
-        "body": [],
-        "description": ""
     }
 }
