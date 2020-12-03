@@ -34,10 +34,11 @@
         "body": [
             "import React from \"react\";",
             "",
-            "export ${1} = (props) => {",
+            "export const ${1} = (props) => {",
             "    return (",
             "       <div className=\"${2}-view\">",
             "       </div>",
+            "    );",
             "}"
         ],
         "description": "Generates an empty react view function."
