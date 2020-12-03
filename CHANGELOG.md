@@ -1,3 +1,7 @@
+# 1.1.0
+
+-   Added the \_m snippet for model generation.
+
 # 1.0.1
 
 -   Fixed the \_vc snippet missing closing parenthesis.
