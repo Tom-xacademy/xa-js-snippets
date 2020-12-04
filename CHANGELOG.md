@@ -1,3 +1,7 @@
+# 1.1.2
+
+-   Fixed the \_mo 'value' string injection being taken literally in the snippet and removed leftover closing bracket.
+
 # 1.1.1
 
 -   Fixed the tags in package.json.
