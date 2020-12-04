@@ -1,6 +1,12 @@
+# 1.1.1
+
+-   Fixed the tags in package.json.
+-   Fixed the missing check in model constructor for empty values such as string, null, undefined.
+-   Added 'skipping' for array and object types in model constructor.
+
 # 1.1.0
 
--   Added the \_m snippet for model generation.
+-   Added the \_mo snippet for model generation.
 
 # 1.0.1
 
