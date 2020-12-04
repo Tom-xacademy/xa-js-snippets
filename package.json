@@ -1,7 +1,7 @@
 {
     "name": "xajssnippets",
     "description": "React-javascript code snippets.",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "displayName": "React - Javascript snippets",
     "publisher": "Tomi",
     "icon": "images/react.png",
@@ -16,10 +16,11 @@
     },
     "keywords": [
         "react",
-        "react-xa",
-        "typescript",
+        "javascript",
         "codesnippets",
-        "typescript code snippets",
+        "javascript code snippets",
+        "react-javascript",
+        "js code snippets",
         "xacademy"
     ],
     "engines": {

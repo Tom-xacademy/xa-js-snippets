@@ -76,14 +76,15 @@
             "        if (!data) return;",
             "",
             "        for (let key in this) {",
-            "            if (key in data) {",
-            "                this[key] = `${data[key]}`;",
+            "            const value = data[key];",
+            "            if (!value || value instanceof Array || typeof value === \"object\") continue;",
+            "                this[key] = `${value}`;",
             "            }",
             "        }",
             "",
             "    }",
             "",
-            "    ${2}= \"\"; // string",
+            "    ${2} = \"\"; // string",
             "}"
         ],
         "description": "Generates a model instance."
