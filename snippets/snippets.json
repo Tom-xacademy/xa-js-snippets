@@ -89,5 +89,64 @@
             "}"
         ],
         "description": "Generates a model instance."
+    },
+    "ModelUtilsFile": {
+        "prefix": "_mu",
+        "body": [
+            "export const setBool = (data) => {",
+            "    if (typeof data === \"boolean\") return data;",
+            "",
+            "    if (data === \"1\" || data === \"true\") return true;",
+            "    return false;",
+            "};",
+            "",
+            "export const setString = (data) => {",
+            "    return `${ data }`;",
+            "};",
+            "",
+            "export const setNumber = (data, defaultValue = 0) => {",
+            "    if (typeof data === \"number\") return data;",
+            "    if (isNaN(data)) return defaultValue;",
+            "    return Number(data);",
+            "};",
+            "",
+            "export const valueChecker = (base, data) => {",
+            "    if (!data) return base;",
+            "    if (typeof base === \"string\") return setString(data);",
+            "    if (typeof base === \"number\") return setNumber(data);",
+            "    if (typeof base === \"boolean\") return setBool(data);",
+            "",
+            "    return base;",
+            "};",
+            "",
+            "/**",
+            " * This function loops through the keys of 'this' and checks their types.",
+            " * If the same key exists on the incoming data object as well,",
+            " * **valueChecker** will run the related function on the data value",
+            " * and transform it to the format that's defined in the model.",
+            " * If the type of the base value isn't string, number, or boolean, or if data is void,",
+            " * it will return the base value instead of trying to transform the data.",
+            " */",
+            "export const ModelConstructor = (baseValues, dataValues) => {",
+            "    for (let key in baseValues) {",
+            "        baseValues[key] = valueChecker(baseValues[key], dataValues[key]);",
+            "    }",
+            "};"
+        ],
+        "description": "Generates a model utils file content which can be used in models to parse the REST API data to the required formats."
+    },
+    "GenerateAutoFillModel": {
+        "prefix": "_moauto",
+        "body": [
+            "export class ${1}Model {",
+            "    constructor(data) {",
+            "        if (!data) return;",
+            "        ModelConstructor(this, data);",
+            "    }",
+            "",
+            "    ${2} = \"\"; // string",
+            "}"
+        ],
+        "description": "Generates a model instance which implements the ModelConstructor."
     }
 }
